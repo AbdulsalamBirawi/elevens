@@ -1,16 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primery: "#79A379",
+        secondary: "#D1BB90",
+        tertiary: "#A29585",
+        gray1: "#333333",
+        gray4: "#BDBDBD",
+      },
+      gradientColorStops: {
+        "primery-black": "var(--primery-color), black", // Replace '--primary-color' with your primary color
+      },
+    },
   },
   plugins: [],
 };
