@@ -79,4 +79,6 @@ const HouseFeatures = () => {
   )
 }
 
-export default HouseFeatures
+      
+
+export default HouseFeatures;

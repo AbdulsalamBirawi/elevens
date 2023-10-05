@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { NavbarLinks } from "../../molecules";
 
-export const Navbar = () => {
+type props = {
+  solid: boolean;
+};
+
+export const Navbar = ({ solid }: props) => {
   const [navbarBackground, setNavbarBackground] = useState("bg-transparent");
   const [liTextColor, setLiTextColor] = useState("text-white");
   const [isTop, setIsTop] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (solid) {
+        setNavbarBackground("bg-white");
+        setLiTextColor("text-primery");
+      } else if (window.scrollY > 100) {
         setNavbarBackground("bg-white");
         setLiTextColor("text-primery");
         setIsTop(false);
