@@ -25,7 +25,9 @@ export const NavbarLinks = ({ textColor }: props) => {
       <Container>
         <div className="flex justify-between">
           <div className="flex items-center  gap-x-5">
-            <Logo />
+            <div className="w-32 flex items-center h-full">
+              <Logo dark />
+            </div>
 
             <div className="hidden lg:flex xl:flex gap-x-5">
               {links.map((itm, idx) => (
