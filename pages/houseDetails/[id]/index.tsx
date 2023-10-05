@@ -1,7 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import GridGallary from '../../../src/components/UI/molecules/GridGallary'
-import GridImage from '../../../src/components/UI/atoms/GridImage'
-import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImagesGallery from '../../../src/components/UI/molecules/ImagesGallery';
 import HouseDescription from '../../../src/components/UI/molecules/HouseDescription';
@@ -10,6 +8,8 @@ import HousePlan from '../../../src/components/UI/molecules/HousePlan';
 import HouseForm from '../../../src/components/UI/molecules/HouseForm';
 import GridVideos from '../../../src/components/UI/molecules/GridVideos';
 import VideosGallery from '../../../src/components/UI/molecules/VideosGallery';
+import { Container } from '../../../src/components/UI/atoms';
+import { GallerySection } from '../../../src/components/UI/organisms';
 const index  = () => {
 
     const [startIndex,setStartIndex]=useState(2);
@@ -143,8 +143,9 @@ useEffect(() => {
   };
 }, []);
   return (
-<div className='px-5 lg:px-28'>
-  <h1 className='text-black text-5xl py-5 '>GALLARY</h1>
+<div>
+  <Container>
+  <h1 className='text-black text-5xl pt-20 pb-5 '>GALLARY</h1>
       <GridGallary windowWidth={windowWidth} showGallare={handelshowGallary} images={originalImages} handelStartIndex={handelStartIndex}/>
      <div className=' flex flex-col lg:flex-row  justify-start items-start gap-7'>
           <div className=' w-[100%] lg:w-[70%] xl:w-[100%]'>
@@ -159,6 +160,14 @@ useEffect(() => {
     <GridVideos showVideos={handelshowVideos}  handelStartIndex={handelStartIndex}   videos={originalVidoes}/>
       {showGallary&& <ImagesGallery setShowGallary={handelshowGallary} startIndex={startIndex} images={images}/>}
       {showVideos&& <VideosGallery setShowVideos={handelshowVideos} playVideo={playVideo} imageGalleryRef={imageGalleryRef}  startIndex={startIndex} videos={videos}/>}
+      </Container>
+    <div>
+    <GallerySection/>
+    </div>
+
+    
+
+
 </div>
   )
 }

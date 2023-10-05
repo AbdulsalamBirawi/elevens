@@ -30,7 +30,7 @@ export const GalleryCard = ({
 }: props) => {
   const router = useRouter();
   return (
-    <div className="flex flex-col w-full  bg-white items-start justify-center p-3">
+    <div className="flex flex-col w-full lg:max-w-sm  bg-white items-start justify-center p-3">
       <Swiper
         modules={[Pagination, Autoplay]}
         loop={true} // Add this line to enable infinite looping

@@ -1,6 +1,7 @@
 import React from 'react'
 import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/css/image-gallery.css";
+import { Container } from '../atoms';
 
 type proprsType={
     setShowGallary:(e:boolean)=>void,
@@ -12,10 +13,10 @@ const ImagesGallery = ({setShowGallary, startIndex ,images}:proprsType) => {
   return (
     <div>
 			<div
-				className={`justify-center w-auto h-[600px]  flex m-auto  md:mt-0 fixed inset-0 z-50 transition   `}
+				className={`justify-center w-auto h-[600px]   flex m-auto  md:mt-0 fixed inset-0 z-50 transition   `}
 			>
 				<div className="relative   my-6 mx-auto ">
-					<div className="border-0  w-auto h-[250px] rounded-lg shadow-lg relative flex flex-col   outline-none focus:outline-none">
+					<div className="border-0  w-[400px]  sm:w-auto h-[250px] rounded-lg shadow-lg relative flex flex-col   outline-none focus:outline-none">
 						<div className="flex items-start justify-between  border-solid  border-slate-200 rounded-t">
               
               <button
