@@ -42,7 +42,7 @@ export const ChooseUsSection = () => {
         <div className=" xl:w-2/3 lg:w-2/3 w-full   h-full">
           <TitleDesign>WHY CHOOSE US</TitleDesign>
           <div className="lg:ml-[140px] xl:ml-[140px] ml-5 mt-10 mr-5">
-            <div className="  flex flex-wrap   px-10 gap-y-14 gap-x-16 ">
+            <div className="  flex flex-wrap   px-10 gap-y-14 lg:justify-start xl:justify-start justify-center gap-x-12 ">
               {cards.map((card, idx) => (
                 <IconCard icon={card.icon} text={card.text} key={idx} />
               ))}
