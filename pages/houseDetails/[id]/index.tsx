@@ -19,6 +19,7 @@ import VideosGallery from "../../../src/components/UI/molecules/VideosGallery";
 import {
   ContactInfo,
   Footer,
+  GallerySection,
   Navbar,
 } from "../../../src/components/UI/organisms";
 import { Container } from "../../../src/components/UI/atoms";
@@ -140,7 +141,7 @@ const index = () => {
     };
   }, []);
   return (
-    <div className="">
+    <div className="" style={{fontFamily:'NeulisAlt-Regular'}}>
       <Navbar solid />
       <Container>
         <div className="h-20" />
@@ -160,7 +161,7 @@ const index = () => {
 
           <HouseForm />
         </div>
-        <div className="  lg:mb-96 xl:mb-96 mb-0  ">
+        <div className="   ">
           <GridVideos
             showVideos={handelshowVideos}
             handelStartIndex={handelStartIndex}
@@ -184,6 +185,7 @@ const index = () => {
           />
         )}
       </Container>
+      <GallerySection/>
       <ContactInfo />
       <Footer />
     </div>

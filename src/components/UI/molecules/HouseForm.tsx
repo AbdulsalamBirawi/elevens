@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
+import { Logo } from '../atoms';
 const HouseForm = () => {
 
   type FormData = {
@@ -22,7 +23,12 @@ const HouseForm = () => {
   return (
     <div className='border-2 p-8 border-primery my-5 w-[100%] m-auto sm:w-[75%] lg:w-[50%]'>
     <div className='flex flex-col  justify-center items-center gap-5'>
-        <h2 className='text-xl text-center '> LOGO</h2>
+    
+    <div className="w-64 flex items-center h-full">
+              <Logo dark />
+            </div>
+
+        
         <p className='text-base '>Send Message via Whatsapp</p>
         <p className='text-base text-center px-3 py-2  border-primery border-2 w-[200px] text-primery '>+21 555 665 456</p>
         <p className='mb-2'>or Book now</p>
