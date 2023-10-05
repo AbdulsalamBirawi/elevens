@@ -16,7 +16,11 @@ import HousePlan from "../../../src/components/UI/molecules/HousePlan";
 import HouseForm from "../../../src/components/UI/molecules/HouseForm";
 import GridVideos from "../../../src/components/UI/molecules/GridVideos";
 import VideosGallery from "../../../src/components/UI/molecules/VideosGallery";
-import { Footer, Navbar } from "../../../src/components/UI/organisms";
+import {
+  ContactInfo,
+  Footer,
+  Navbar,
+} from "../../../src/components/UI/organisms";
 import { Container } from "../../../src/components/UI/atoms";
 const index = () => {
   const [startIndex, setStartIndex] = useState(2);
@@ -180,6 +184,7 @@ const index = () => {
           />
         )}
       </Container>
+      <ContactInfo />
       <Footer />
     </div>
   );
