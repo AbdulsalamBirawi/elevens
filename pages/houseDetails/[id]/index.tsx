@@ -19,9 +19,11 @@ import VideosGallery from "../../../src/components/UI/molecules/VideosGallery";
 import {
   ContactInfo,
   Footer,
+  GallerySection,
   Navbar,
 } from "../../../src/components/UI/organisms";
-import { Container } from "../../../src/components/UI/atoms";
+import { Container, Title } from "../../../src/components/UI/atoms";
+
 const index = () => {
   const [startIndex, setStartIndex] = useState(2);
   const [showGallary, setShowGallary] = useState(false);
@@ -140,11 +142,14 @@ const index = () => {
     };
   }, []);
   return (
-    <div className="">
+    <div className="" style={{fontFamily:'NeulisAlt-Regular'}}>
       <Navbar solid />
       <Container>
         <div className="h-20" />
-        <h1 className="text-black text-5xl py-5 ">GALLARY</h1>
+        <div className=" py-7 ">
+          <Title >GALLARY</Title>
+        </div>
+    
         <GridGallary
           windowWidth={windowWidth}
           showGallare={handelshowGallary}
@@ -160,7 +165,7 @@ const index = () => {
 
           <HouseForm />
         </div>
-        <div className="  lg:mb-96 xl:mb-96 mb-0  ">
+        <div className="   ">
           <GridVideos
             showVideos={handelshowVideos}
             handelStartIndex={handelStartIndex}
@@ -184,6 +189,9 @@ const index = () => {
           />
         )}
       </Container>
+     
+      
+      <GallerySection houseDetails={true}/>
       <ContactInfo />
       <Footer />
     </div>

@@ -13,6 +13,7 @@ import { useSwiper } from "swiper/react";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import Image from "next/image";
+import Link from "next/link";
 
 const SwiperButtonNext = ({ children }: any) => {
   const swiper = useSwiper();
@@ -38,7 +39,7 @@ const SwiperButtonPrev = ({ children }: any) => {
   );
 };
 
-export const GallerySection = () => {
+export const GallerySection = ({houseDetails=false}) => {
   return (
     <div className="relative">
       <Image
@@ -46,9 +47,19 @@ export const GallerySection = () => {
         className="absolute -mt-24 z-0 top-60 left-0"
         src={Victor}
       />
-      <div className="m-auto my-10 text-center">
-        <Title>PROPERTY GALLERY</Title>
-      </div>
+      {
+        houseDetails?
+        <Container>
+          <div className="m-auto my-10">
+            <Title>PROPERTY GALLERY</Title>
+          </div>
+        </Container>
+          :
+        <div className="m-auto my-10 text-center">
+          <Title>PROPERTY GALLERY</Title>
+        </div>
+      }
+      
       <Container>
         <Swiper
           loop={true}
@@ -75,6 +86,7 @@ export const GallerySection = () => {
         >
           {cards.map((card, idx) => (
             <SwiperSlide key={idx}>
+              <Link href={'houseDetails/1'}>
               <GalleryCard
                 cost={card.cost}
                 images={card.images}
@@ -84,7 +96,9 @@ export const GallerySection = () => {
                 title={card.title}
                 type={card.type}
               />
+              </Link>
             </SwiperSlide>
+            
           ))}
 
           <div className=" flex xl:justify-end lg:justify-end justify-center my-5 gap-5 ">

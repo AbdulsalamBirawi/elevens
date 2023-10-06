@@ -9,6 +9,7 @@ import Image from "../../src/assets/aboutusimage.png";
 import { Pagination } from "../../src/components/UI/molecules/pagination";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { ContactInfo, Footer, Navbar } from "../../src/components/UI/organisms";
+import Link from "next/link";
 const index = () => {
   const [page, setPage] = useState();
   const cards = [
@@ -96,15 +97,16 @@ const index = () => {
   ];
 
   return (
-    <div className="mt-32">
+    <div className="mt-32" style={{fontFamily:'NeulisAlt-Regular'}}>
       <Navbar solid />
       <Container>
         <Title>Search</Title>
         <SearchBar />
-        <div className="flex flex-row items-center justify-center flex-wrap gap-2 basis-1/3">
+        <div className=" flex flex-col lg:flex-row items-center justify-center flex-wrap gap-2 basis-1/3">
           {cards.map((card, idx) => {
             return (
-              <div key={idx} className="w-1/4">
+              <div key={idx} className=" w-full lg:w-auto  ">
+                <Link href={'houseDetails/1'}>
                 <GalleryCard
                   cost={card.cost}
                   images={card.images}
@@ -114,6 +116,7 @@ const index = () => {
                   title={card.title}
                   type={card.type}
                 />
+                </Link>
               </div>
             );
           })}
