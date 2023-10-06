@@ -44,7 +44,7 @@ const index = () => {
   const imageGalleryRef = useRef(null);
 
   const playVideo = () => {
-    imageGalleryRef.current.play(true);
+    imageGalleryRef?.current.play(true);
   };
 
   const renderVideo = (item) => {
@@ -142,14 +142,14 @@ const index = () => {
     };
   }, []);
   return (
-    <div className="" style={{fontFamily:'NeulisAlt-Regular'}}>
+    <div className="" style={{ fontFamily: "NeulisAlt-Regular" }}>
       <Navbar solid />
       <Container>
         <div className="h-20" />
         <div className=" py-7 ">
-          <Title >GALLARY</Title>
+          <Title>GALLARY</Title>
         </div>
-    
+
         <GridGallary
           windowWidth={windowWidth}
           showGallare={handelshowGallary}
@@ -189,9 +189,8 @@ const index = () => {
           />
         )}
       </Container>
-     
-      
-      <GallerySection houseDetails={true}/>
+
+      <GallerySection houseDetails={true} />
       <ContactInfo />
       <Footer />
     </div>

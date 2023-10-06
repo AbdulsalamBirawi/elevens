@@ -97,7 +97,7 @@ const index = () => {
   ];
 
   return (
-    <div className="mt-32" style={{fontFamily:'NeulisAlt-Regular'}}>
+    <div className="mt-32" style={{ fontFamily: "NeulisAlt-Regular" }}>
       <Navbar solid />
       <Container>
         <Title>Search</Title>
@@ -106,16 +106,15 @@ const index = () => {
           {cards.map((card, idx) => {
             return (
               <div key={idx} className=" w-full lg:w-auto  ">
-                <Link href={'houseDetails/1'}>
-                <GalleryCard
-                  cost={card.cost}
-                  images={card.images}
-                  link={card.link}
-                  room={card.room}
-                  size={card.size}
-                  title={card.title}
-                  type={card.type}
-                />
+                <Link href={"houseDetails/1"}>
+                  <GalleryCard
+                    cost={card.cost}
+                    images={card.images}
+                    link={card.link}
+                    room={card.room}
+                    title={card.title}
+                    type={card.type}
+                  />
                 </Link>
               </div>
             );

@@ -1,15 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
-import "swiper/css/autoplay";
 import "swiper/css/navigation";
-
 import Image from "next/image";
 import { Button } from "../../atoms";
 import { useRouter } from "next/router";
 import { Navigation } from "swiper/modules";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 type props = {
   images: any[];
@@ -33,25 +32,35 @@ export const GalleryCard = ({
   return (
     <div className="flex flex-col w-full lg:max-w-sm  bg-white items-start justify-center p-3">
       <Swiper
-        modules={[Pagination, Autoplay, Navigation]}
+        modules={[Pagination, Navigation]}
         loop={true} // Add this line to enable infinite looping
         pagination={{ clickable: true }}
         autoplay
-        navigation
+        navigation={{
+          prevEl: ".custom-swiper-button-prev", // Add custom class for prev button
+          nextEl: ".custom-swiper-button-next", // Add custom class for next button
+        }}
         className="w-full h-60"
       >
         {images.map((image, idx) => (
-          <SwiperSlide className=" h-full" key={idx}>
+          <SwiperSlide className=" relative h-full" key={idx}>
             <Image
               width={900}
               height={900}
               src={image.src}
               alt=" "
-              className="h-full  object-cover"
+              className=" absolute h-full   object-cover"
             />
+            <div className=" absolute top-[45%] text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-prev">
+              <FaArrowLeft />
+            </div>
+            <div className=" absolute right-0 top-[45%] text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-next">
+              <FaArrowRight />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
+
       <h2 className=" text-black font-normal text-2xl my-3">{title}</h2>
       <h2 className=" text-tertiary font-normal text-base mb-3">{type}</h2>
       <div className="flex items-center mb-3 w-full justify-between">

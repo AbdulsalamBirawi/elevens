@@ -1,4 +1,8 @@
-import Image from "../../../../assets/aboutusimage.png";
+import Image1 from "../../../../assets/1.jpg";
+import Image2 from "../../../../assets/3.jpg";
+import Image3 from "../../../../assets/4.jpg";
+import Image4 from "../../../../assets/5.jpg";
+import Image5 from "../../../../assets/6.jpg";
 export type Tcards = {
   images: any[];
   title: string;
@@ -11,7 +15,7 @@ export type Tcards = {
 export const cards: Tcards = [
   {
     cost: 500,
-    images: [Image, Image, Image, Image],
+    images: [Image1, Image2],
     link: "/aboutus",
     room: "Living Area",
 
@@ -20,7 +24,7 @@ export const cards: Tcards = [
   },
   {
     cost: 500,
-    images: [Image, Image, Image, Image],
+    images: [Image4, Image1, Image4],
     link: "/aboutus",
     room: "Living Area",
 
@@ -29,7 +33,7 @@ export const cards: Tcards = [
   },
   {
     cost: 500,
-    images: [Image, Image, Image, Image],
+    images: [Image2, Image4, Image1],
     link: "/aboutus",
     room: "deluxe one bed room",
 
@@ -38,7 +42,7 @@ export const cards: Tcards = [
   },
   {
     cost: 500,
-    images: [Image, Image, Image, Image],
+    images: [Image5, Image2, Image1],
     link: "/aboutus",
     room: "deluxe king studio",
 
