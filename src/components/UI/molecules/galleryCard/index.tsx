@@ -34,7 +34,9 @@ export const GalleryCard = ({
       <Swiper
         modules={[Pagination, Navigation]}
         loop={true} // Add this line to enable infinite looping
-        pagination={{ clickable: true }}
+        pagination={{
+          clickable: true,
+        }}
         autoplay
         navigation={{
           prevEl: ".custom-swiper-button-prev", // Add custom class for prev button
@@ -43,7 +45,7 @@ export const GalleryCard = ({
         className="w-full h-60"
       >
         {images.map((image, idx) => (
-          <SwiperSlide className=" relative h-full" key={idx}>
+          <SwiperSlide className=" h-full" key={idx}>
             <Image
               width={900}
               height={900}
@@ -51,11 +53,13 @@ export const GalleryCard = ({
               alt=" "
               className=" absolute h-full   object-cover"
             />
-            <div className=" absolute top-[45%] text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-prev">
-              <FaArrowLeft />
-            </div>
-            <div className=" absolute right-0 top-[45%] text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-next">
-              <FaArrowRight />
+            <div className="relative w-full h-full ">
+              <div className="  absolute top-[45%]  text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-prev">
+                <FaArrowLeft />
+              </div>
+              <div className="  absolute right-0 top-[45%] text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-next">
+                <FaArrowRight />
+              </div>
             </div>
           </SwiperSlide>
         ))}

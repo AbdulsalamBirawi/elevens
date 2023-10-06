@@ -16,6 +16,9 @@ module.exports = {
         gray1: "#333333",
         gray4: "#BDBDBD",
       },
+      backgroundColor: {
+        "pagination-dot-color": "#79A379", // Change to your desired color
+      },
       gradientColorStops: {
         "primery-black": "var(--primery-color), black", // Replace '--primary-color' with your primary color
       },

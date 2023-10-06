@@ -26,7 +26,7 @@ export const HeroSection = () => {
           Elevate Your Living Experience
         </h1>
 
-        <div className="w-64">
+        <div className="w-">
           <Button color="white" fill={false}>
             discover Properties
           </Button>
