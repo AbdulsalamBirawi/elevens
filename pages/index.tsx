@@ -1,4 +1,5 @@
 import { Button } from "../src/components/UI/atoms";
+import { MapComponent } from "../src/components/UI/molecules";
 import {
   AboutUsSection,
   ChooseUsSection,
@@ -6,7 +7,6 @@ import {
   Footer,
   GallerySection,
   HeroSection,
-  MapWithTabs,
   Navbar,
 } from "../src/components/UI/organisms";
 
@@ -17,7 +17,7 @@ export default function Home() {
     // Add more markers as needed
   ];
   return (
-    <div className=" h-[200vh] " style={{fontFamily:'CopperplateRegular'}}>
+    <div className=" h-[200vh] " style={{ fontFamily: "CopperplateRegular" }}>
       <Navbar solid={false} />
       <HeroSection />
       <AboutUsSection />

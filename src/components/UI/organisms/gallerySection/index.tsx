@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Zoom } from "swiper/modules";
 import Victor from "../../../../assets/victor2.svg";
-
 import "swiper/css/autoplay";
 import "swiper/css/zoom";
 import { cards } from "./data";
@@ -39,7 +38,7 @@ const SwiperButtonPrev = ({ children }: any) => {
   );
 };
 
-export const GallerySection = ({houseDetails=false}) => {
+export const GallerySection = ({ houseDetails = false }) => {
   return (
     <div className="relative">
       <Image
@@ -47,19 +46,18 @@ export const GallerySection = ({houseDetails=false}) => {
         className="absolute -mt-24 z-0 top-60 left-0"
         src={Victor}
       />
-      {
-        houseDetails?
+      {houseDetails ? (
         <Container>
           <div className="m-auto my-10">
             <Title>PROPERTY GALLERY</Title>
           </div>
         </Container>
-          :
+      ) : (
         <div className="m-auto my-10 text-center">
           <Title>PROPERTY GALLERY</Title>
         </div>
-      }
-      
+      )}
+
       <Container>
         <Swiper
           loop={true}
@@ -86,22 +84,20 @@ export const GallerySection = ({houseDetails=false}) => {
         >
           {cards.map((card, idx) => (
             <SwiperSlide key={idx}>
-              <Link href={'houseDetails/1'}>
-              <GalleryCard
-                cost={card.cost}
-                images={card.images}
-                link={card.link}
-                room={card.room}
-                size={card.size}
-                title={card.title}
-                type={card.type}
-              />
+              <Link href={"houseDetails/1"}>
+                <GalleryCard
+                  cost={card.cost}
+                  images={card.images}
+                  link={card.link}
+                  room={card.room}
+                  title={card.title}
+                  type={card.type}
+                />
               </Link>
             </SwiperSlide>
-            
           ))}
 
-          <div className=" flex xl:justify-end lg:justify-end justify-center my-5 gap-5 ">
+          <div className=" flex xl:justify-end p-5 lg:justify-end justify-center my-5 gap-5 ">
             <SwiperButtonPrev>
               <MdArrowBackIosNew />
             </SwiperButtonPrev>

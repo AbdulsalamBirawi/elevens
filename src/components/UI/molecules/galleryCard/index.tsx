@@ -4,17 +4,18 @@ import "swiper/css";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import "swiper/css/navigation";
 
 import Image from "next/image";
 import { Button } from "../../atoms";
 import { useRouter } from "next/router";
+import { Navigation } from "swiper/modules";
 
 type props = {
   images: any[];
   title: string;
   type: string;
   cost: number;
-  size: number;
   room: string;
   link: string;
 };
@@ -24,7 +25,7 @@ export const GalleryCard = ({
   images,
   link,
   room,
-  size,
+
   title,
   type,
 }: props) => {
@@ -32,10 +33,11 @@ export const GalleryCard = ({
   return (
     <div className="flex flex-col w-full lg:max-w-sm  bg-white items-start justify-center p-3">
       <Swiper
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination, Autoplay, Navigation]}
         loop={true} // Add this line to enable infinite looping
         pagination={{ clickable: true }}
         autoplay
+        navigation
         className="w-full h-60"
       >
         {images.map((image, idx) => (
@@ -58,7 +60,6 @@ export const GalleryCard = ({
         </h2>
         <div className="bg-[#F5F5F5]    p-2">
           <h4 className=" text-base font-normal text-tertiary">
-            {size.toString()} m2{" "}
             <span className="text-black ml-2 font-normal text-base">
               {room}
             </span>

@@ -26,7 +26,7 @@ export const ContactInfo = () => {
                 If you find your dream home connect with us
               </p>
             </div>
-            <div className="w-72 flex  mb-10 ">
+            <div className="w-72 mx-auto flex  mb-10 ">
               <Logo dark={false} />
             </div>
             <div className="flex justify-center lg:justify-start xl:justify-start ">
@@ -42,7 +42,7 @@ export const ContactInfo = () => {
           <div className=" relative pb-20  lg:w-1/2 xl:w-1/2 w-full mt-[83px]  p-10">
             <div className="absolute inset-0    bg-black  z-0 opacity-50 "></div>
             <form className="relative">
-              <div className="flex gap-8">
+              <div className=" xl:flex lg:flex block gap-8">
                 <div className=" w-full">
                   <Input
                     label="FIRST NAME"

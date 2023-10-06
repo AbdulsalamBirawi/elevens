@@ -33,7 +33,7 @@ export const Footer = () => {
       <div className="  w-full mb-3 h-[1px] bg-white mt-5" />
       <div className=" flex justify-center items-center ">
         <p className=" text-xs text-gray4 font-normal">
-          © 2023 Dandelion | All Rights Reserved
+          © 2023 Uplink | All Rights Reserved
         </p>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 import React from "react";
 import Victor from "../../../../assets/Vector.svg";
 import Image from "next/image";
-import { Button, Description, TitleDesign } from "../../atoms";
+import { Button, Description, Title, TitleDesign } from "../../atoms";
 import AboutUsImage from "../../../../assets/aboutusimage.png";
 import ImageTop from "../../../../assets/imageTop.svg";
 import ImageBottom from "../../../../assets/imageBottom.svg";
@@ -16,8 +16,8 @@ export const AboutUsSection = () => {
       />
       <div className=" lg:flex xl:flex block  xl:pr-[140px] lg:pr-[140px] pr-0     w-full mt-24 z-20 h-full">
         <div className=" xl:w-1/2 lg:w-1/2 w-full   h-full">
-          <TitleDesign>About Us</TitleDesign>
           <div className="lg:ml-[140px] xl:ml-[140px] ml-5 mt-5 mr-5">
+            <Title>About Us</Title>
             <Description>
               Welcome to ELEVENS, Maadi’s premier residence building, where
               sophisticated living meets modern design. Nestled in the heart of
@@ -35,7 +35,7 @@ export const AboutUsSection = () => {
               inviting and inspiring.
             </Description>
           </div>
-          <div className="lg:ml-[140px] xl:ml-[140px] ml-5 my-10 w-64">
+          <div className="lg:ml-[140px] xl:ml-[140px] ml-5 my-5 w-64">
             <Button fill={false} color="green">
               LEARN MORE
             </Button>

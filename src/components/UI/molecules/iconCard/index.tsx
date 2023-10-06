@@ -10,7 +10,7 @@ export const IconCard = ({ icon, text }: props) => {
       <div className="bg-[#F5F5F5] mb-3 p-1 text-secondary flex items-center justify-center w-24 h-24  text-5xl rounded-full">
         {icon}
       </div>
-      <p className="text-black text-2xl text-center font-normal">
+      <p className="text-black text-lg text-center font-medium">
         {text.toUpperCase()}
       </p>
     </div>
