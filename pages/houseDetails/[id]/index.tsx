@@ -22,7 +22,8 @@ import {
   GallerySection,
   Navbar,
 } from "../../../src/components/UI/organisms";
-import { Container } from "../../../src/components/UI/atoms";
+import { Container, Title } from "../../../src/components/UI/atoms";
+
 const index = () => {
   const [startIndex, setStartIndex] = useState(2);
   const [showGallary, setShowGallary] = useState(false);
@@ -145,7 +146,10 @@ const index = () => {
       <Navbar solid />
       <Container>
         <div className="h-20" />
-        <h1 className="text-black text-5xl py-5 ">GALLARY</h1>
+        <div className=" py-7 ">
+          <Title >GALLARY</Title>
+        </div>
+    
         <GridGallary
           windowWidth={windowWidth}
           showGallare={handelshowGallary}
@@ -185,7 +189,9 @@ const index = () => {
           />
         )}
       </Container>
-      <GallerySection/>
+     
+      
+      <GallerySection houseDetails={true}/>
       <ContactInfo />
       <Footer />
     </div>

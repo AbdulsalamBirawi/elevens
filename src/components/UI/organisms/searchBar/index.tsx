@@ -1,22 +1,30 @@
 import React from 'react'
 import RangeSlider from '../../molecules/RangeSlider'
 import Select from '../../atoms/Select'
+//import Select from 'react-select'
 import { Button, Container } from '../../atoms'
 const index = () => {
   return (
-    <div className='lg:mx-16'>
+    <div className='lg:mx-16 '>
         <RangeSlider/>
-        <div className='flex flex-row gap-4 md:gap-0  my-10'>
-            <div className='flex flex-row gap-2 w-full'>
-            <Select/>
-            <Select/>
-            <Select/>
-            <Select/>
+        <div className='  flex flex-col md:flex-row gap-5 lg:gap-36  justify-center   items-center my-10 '>
+            <div className=' z-10 flex flex-row gap-3  w-full items-center justify-center '>
+              <div className=' flex flex-col gap-3 md:flex-row w-full'>
+              <Select/>
+              <Select/>
+              </div>
+           
+              <div className=' flex gap-3 flex-col md:flex-row w-full'>
+              <Select/>
+              <Select/>
+              </div>
+           
+            
             </div>
         
         
         
-        <Button className='w-[10px]' fill color='primery' style={{width:'200px'}}>Search</Button>
+        <Button className='' fill color='primery' style={{width:'200px'}}>Search</Button>
     
      </div>
     </div>

@@ -9,7 +9,7 @@ const RangeSlider = ({ rtl }) => {
     <div className='flex mt-10  flex-row gap-2 justify-between items-baseline'>
        < div className=' flex flex-col items-center'>
                 <p >${values[0]}</p>
-                <p className='border-t border-[#ccc]'>Min Price</p>
+                <p className='border-t text-center border-[#ccc]'>Min Price</p>
             </div>
             <div className='max-w-[80%] w-full'>
     <div
@@ -83,12 +83,11 @@ const RangeSlider = ({ rtl }) => {
           </div>
         )}
       />
-      {/* <output style={{ marginTop: '30px' }}>{values[0].toFixed(1)} - {values[1].toFixed(1)}</output> */}
     </div>
     </div>
     <div className='flex flex-col items-center'>
                 <p >${values[1]}</p>
-                <p className='border-t border-[#ccc]'>Max Price</p>
+                <p className='border-t text-center border-[#ccc]'>Max Price</p>
             </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/css/image-gallery.css";
-import { Container } from '../atoms';
+import { AiOutlineClose } from 'react-icons/ai';
 
 type proprsType={
     setShowGallary:(e:boolean)=>void,
@@ -23,7 +23,7 @@ const ImagesGallery = ({setShowGallary, startIndex ,images}:proprsType) => {
 								className="  rounded-full mb-2  m-auto   border-0 text-gray-200  hover:text-gray-400  text-4xl leading-none font-light"
 								onClick={() => setShowGallary(false)}
 							>
-								x
+								<AiOutlineClose/>
 							</button>
           
 							
