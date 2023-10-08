@@ -102,10 +102,10 @@ const index = () => {
       <Container>
         <Title>Search</Title>
         <SearchBar />
-        <div className=" flex flex-col lg:flex-row items-center justify-center flex-wrap gap-2 basis-1/3">
+        <div className=" flex flex-col lg:flex-row items-center justify-center flex-wrap gap-7 basis-1/3">
           {cards.map((card, idx) => {
             return (
-              <div key={idx} className=" w-full lg:w-auto  ">
+              <div key={idx} className=" w-full lg:max-w-xs  ">
                 <Link href={"houseDetails/1"}>
                   <GalleryCard
                     cost={card.cost}

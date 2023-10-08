@@ -4,7 +4,7 @@ const STEP = 50;
 const MIN = 0;
 const MAX = 1000;
 const RangeSlider = ({ rtl }) => {
-    const [values, setValues] = React.useState([500,700]);
+    const [values, setValues] = React.useState([0,1000]);
   return (
     <div className='flex mt-10  flex-row gap-2 justify-between items-baseline'>
        < div className=' flex flex-col items-center'>
@@ -30,7 +30,7 @@ const RangeSlider = ({ rtl }) => {
         renderMark={({ props, index }) => (
           <div
             {...props}
-            className={`h-[17px] w-[2px] ${index * STEP > values[0]&&index * STEP < values[1]?"bg-primery":"bg-[#ccc]"}`}
+            className={`h-[17px] w-[2px] ${index * STEP > values[0]&&index * STEP < values[1]?"bg-primeryLight":"bg-[#ccc]"}`}
           />
         )}
         renderTrack={({ props, children }) => (
@@ -52,7 +52,7 @@ const RangeSlider = ({ rtl }) => {
                 borderRadius: '4px',
                 background: getTrackBackground({
                   values: values,
-                  colors: [ '#ccc','#79A379', '#ccc'],
+                  colors: [ '#ccc','#849679', '#ccc'],
                   min: MIN,
                   max: MAX,
                   rtl
@@ -72,14 +72,14 @@ const RangeSlider = ({ rtl }) => {
               height: '17px',
               width: '17px',
               borderRadius: '10px',
-              backgroundColor: '#79A379',
+              backgroundColor: '#849679',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
               boxShadow: '0px 2px 6px #AAA'
             }}
           >
-            <div className={`h-[16px] w-[5px] bg-primery`}/>
+            <div className={`h-[16px] w-[5px] bg-primeryLight`}/>
           </div>
         )}
       />
