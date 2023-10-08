@@ -27,10 +27,10 @@ export const ContactInfo = () => {
                 If you find your dream home connect with us
               </p>
             </div>
-            <div className="w-40  flex  mb-10 ">
+            <div className="w-40 m-auto xl:m-0 lg:m-0  flex   ">
               <Image src={icon} alt="icon" />
             </div>
-            <div className="flex justify-center lg:justify-start xl:justify-start ">
+            <div className="flex mt-5 justify-center lg:justify-start xl:justify-start ">
               <ContactUsInfo />
             </div>
             <div className=" flex flex-col items-center  lg:items-start xl:items-start">

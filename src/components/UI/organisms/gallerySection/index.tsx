@@ -63,6 +63,7 @@ export const GallerySection = ({ houseDetails = false }) => {
           loop={true}
           autoplay
           spaceBetween={60}
+          style={{ padding: "30px" }}
           modules={[Autoplay, Zoom]}
           zoom={true}
           breakpoints={{
@@ -80,7 +81,7 @@ export const GallerySection = ({ houseDetails = false }) => {
               slidesPerView: 3,
             },
           }}
-          className="w-full h-full"
+          className="w-full  h-full"
         >
           {cards.map((card, idx) => (
             <SwiperSlide key={idx}>

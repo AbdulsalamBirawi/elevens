@@ -33,11 +33,10 @@ export const GalleryCard = ({
   const router = useRouter();
 
   return (
-    <div className="flex flex-col w-full lg:max-w-sm  bg-white items-start justify-center p-3">
+    <div className="flex flex-col  hover:border-2 border-primeryLight hover:scale-110 transition duration-150 w-full lg:max-w-sm  bg-white items-start justify-center p-3">
       <Swiper
-        style={{}}
         modules={[Pagination, Navigation]}
-        loop={true} // Add this line to enable infinite looping
+        loop={true}
         pagination={{
           clickable: true,
         }}
@@ -57,14 +56,14 @@ export const GalleryCard = ({
               alt=" "
               className=" absolute h-full   object-cover"
             />
-            <div className="relative w-full h-full ">
+            <div className="relative opacity-0 hover:opacity-100 transition duration-150 w-full h-full ">
               <div
-                className={`  opacity-0 hover:opacity-100 transition duration-150 absolute top-[45%]  text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-prev-${id}`}
+                className={`   absolute top-[45%]  text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-prev-${id}`}
               >
                 <FaArrowLeft />
               </div>
               <div
-                className={` opacity-0 hover:opacity-100 transition duration-150  absolute right-0 top-[45%] text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-next-${id}`}
+                className={` absolute right-0 top-[45%] text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-next-${id}`}
               >
                 <FaArrowRight />
               </div>
