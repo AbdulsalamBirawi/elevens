@@ -33,7 +33,7 @@ export const GalleryCard = ({
   const router = useRouter();
 
   return (
-    <div className="flex flex-col  hover:border-2 border-primeryLight hover:scale-110 transition duration-150 w-full lg:max-w-sm  bg-white items-start justify-center p-3">
+    <div className="flex flex-col  hover:border-2 border-primeryLight hover:scale-110 transition  duration-500 w-full lg:max-w-sm  bg-white items-start justify-center p-3">
       <Swiper
         modules={[Pagination, Navigation]}
         loop={true}

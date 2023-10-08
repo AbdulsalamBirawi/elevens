@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
-import { Logo } from '../atoms';
+import Image from 'next/image';
+import icon from "../../../assets/Framed Icon-01.png";
 const HouseForm = () => {
 
   type FormData = {
@@ -21,16 +22,16 @@ const HouseForm = () => {
       console.log("aa")
 	};
   return (
-    <div className='border-2 p-8 border-primery my-5 w-[100%] m-auto sm:w-[75%] lg:w-[50%]'>
+    <div className='border-2 p-8 border-primeryLight my-5 w-[100%] m-auto sm:w-[75%] lg:w-[50%]'>
     <div className='flex flex-col  justify-center items-center gap-5'>
     
-    <div className="w-64 flex items-center h-full">
-              <Logo dark />
-            </div>
+    <div className="w-40 flex items-center h-full">
+      <Image src={icon} alt="icon" />
+    </div>
 
         
         <p className='text-base '>Send Message via Whatsapp</p>
-        <p className='text-base text-center px-3 py-2  border-primery border-2 w-[200px] text-primery '>+21 555 665 456</p>
+        <p className='text-base text-center px-3 py-2  border-primeryLight border-2 w-[200px] text-primeryLight '>+21 555 665 456</p>
         <p className='mb-2'>or Book now</p>
     </div>
      
@@ -45,7 +46,7 @@ const HouseForm = () => {
           rules={{ required: 'Full name is required' }}
           render={({ field }) => (
             <>
-              <input placeholder='Full Name' type="text" {...field} className=' w-full border-2 py-2 px-2  border-primery' />
+              <input placeholder='Full Name' type="text" {...field} className=' w-full border-2 py-2 px-2  border-primeryLight' />
               {errors.fullName && <span className='text-red-600'>{errors.fullName.message}</span>}
             </>
           )}
@@ -66,7 +67,7 @@ const HouseForm = () => {
           }}
           render={({ field }) => (
             <>
-              <input placeholder='Last Name' type="email" className=' w-full border-2 py-2 px-2 border-primery' {...field} />
+              <input placeholder='Last Name' type="email" className=' w-full border-2 py-2 px-2 border-primeryLight' {...field} />
               {errors.email && <span className='text-red-600'>{errors.email.message}</span>}
             </>
           )}
@@ -87,7 +88,7 @@ const HouseForm = () => {
           }}
           render={({ field }) => (
             <>
-              <input placeholder='Phone Number' type="text" {...field} className=' w-full border-2 py-2 px-2  border-primery' />
+              <input placeholder='Phone Number' type="text" {...field} className=' w-full border-2 py-2 px-2  border-primeryLight' />
               {errors.phoneNumber && <span className='text-red-600'>{errors.phoneNumber.message}</span>}
             </>
           )}
@@ -99,11 +100,11 @@ const HouseForm = () => {
         <Controller
           control={control}
           name="message"
-          render={({ field }) => <textarea placeholder='Message (Optional)' rows={6} className=' w-full border-2 border-primery py-2 px-2 ' {...field} />}
+          render={({ field }) => <textarea placeholder='Message (Optional)' rows={6} className=' w-full border-2 border-primeryLight py-2 px-2 ' {...field} />}
         />
       </div>
 
-      <button type="submit" className=' transition duration-300 py-2 px-5 hover:border-primery border bg-primery text-white hover:bg-white hover:text-primery w-60 lg:w-44 xl:w-60'>Send Message</button>
+      <button type="submit" className=' transition duration-300 py-2 px-5 hover:border-primeryLight border bg-primeryLight text-white hover:bg-white hover:text-primeryLight w-60 lg:w-44 xl:w-60'>Send Message</button>
 
     </form>
                 
