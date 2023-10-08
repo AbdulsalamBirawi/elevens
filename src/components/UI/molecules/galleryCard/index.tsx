@@ -17,6 +17,7 @@ type props = {
   cost: number;
   room: string;
   link: string;
+  id: any;
 };
 
 export const GalleryCard = ({
@@ -27,11 +28,14 @@ export const GalleryCard = ({
 
   title,
   type,
+  id,
 }: props) => {
   const router = useRouter();
+
   return (
     <div className="flex flex-col w-full lg:max-w-sm  bg-white items-start justify-center p-3">
       <Swiper
+        style={{}}
         modules={[Pagination, Navigation]}
         loop={true} // Add this line to enable infinite looping
         pagination={{
@@ -39,8 +43,8 @@ export const GalleryCard = ({
         }}
         autoplay
         navigation={{
-          prevEl: ".custom-swiper-button-prev", // Add custom class for prev button
-          nextEl: ".custom-swiper-button-next", // Add custom class for next button
+          prevEl: `.custom-swiper-button-prev-${id}`,
+          nextEl: `.custom-swiper-button-next-${id}`,
         }}
         className="w-full h-60"
       >
@@ -54,10 +58,14 @@ export const GalleryCard = ({
               className=" absolute h-full   object-cover"
             />
             <div className="relative w-full h-full ">
-              <div className="  absolute top-[45%]  text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-prev">
+              <div
+                className={`  opacity-0 hover:opacity-100 transition duration-150 absolute top-[45%]  text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-prev-${id}`}
+              >
                 <FaArrowLeft />
               </div>
-              <div className="  absolute right-0 top-[45%] text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-next">
+              <div
+                className={` opacity-0 hover:opacity-100 transition duration-150  absolute right-0 top-[45%] text-primery p-2 rounded-full m-2 bg-white custom-swiper-button-next-${id}`}
+              >
                 <FaArrowRight />
               </div>
             </div>

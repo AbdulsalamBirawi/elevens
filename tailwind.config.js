@@ -10,8 +10,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primery: "#79A379",
-        secondary: "#D1BB90",
+        primery: "#495843",
+        primeryLight: "#849679",
+        secondary: "#e3dccc",
         tertiary: "#A29585",
         gray1: "#333333",
         gray4: "#BDBDBD",
@@ -21,6 +22,10 @@ module.exports = {
       },
       gradientColorStops: {
         "primery-black": "var(--primery-color), black", // Replace '--primary-color' with your primary color
+      },
+      fontFamily: {
+        Aeulis: "Aeulis Alt Medium",
+        Copperplate: "Copperplate Gothic BT",
       },
     },
   },

@@ -3,6 +3,7 @@ import ContactImage from "../../../../assets/conatctInfo.jpg";
 import Image from "next/image";
 import { Button, Container, Input, Logo, TextArea } from "../../atoms";
 import { ContactUsInfo, SocialLinks } from "../../molecules";
+import icon from "../../../../assets/Framed Icon-01.png";
 export const ContactInfo = () => {
   return (
     <div className=" mt-14 min-h-screen  relative  bg-cover bg-center">
@@ -26,8 +27,8 @@ export const ContactInfo = () => {
                 If you find your dream home connect with us
               </p>
             </div>
-            <div className="w-72 mx-auto flex  mb-10 ">
-              <Logo dark={false} />
+            <div className="w-40  flex  mb-10 ">
+              <Image src={icon} alt="icon" />
             </div>
             <div className="flex justify-center lg:justify-start xl:justify-start ">
               <ContactUsInfo />

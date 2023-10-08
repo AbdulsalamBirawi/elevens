@@ -17,7 +17,7 @@ export default function Home() {
     // Add more markers as needed
   ];
   return (
-    <div className=" h-[200vh] " style={{ fontFamily: "CopperplateRegular" }}>
+    <div className=" h-[200vh] ">
       <Navbar solid={false} />
       <HeroSection />
       <AboutUsSection />

@@ -2,6 +2,7 @@ import React from "react";
 import HeroImage from "../../../../assets/hero.jpg";
 import Image from "next/image";
 import { Button, TitleDesign } from "../../atoms";
+import Icon from "../../../../assets/Framed Icon-02.png";
 
 export const HeroSection = () => {
   return (
@@ -17,8 +18,11 @@ export const HeroSection = () => {
         objectFit="cover"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-primery opacity-50 to-black"></div>
+      <div className="absolute inset-0 bg-black  opacity-60 "></div>
       <div className="relative flex flex-col items-center justify-center z-10 p-8 lg:mt-36 xl:mt-36 mt-28 ">
+        <div className="w-40 h-40 mb-5">
+          <Image src={Icon} alt="icon" />
+        </div>
         <h1 className=" mb-8 text-white lg:text-5xl xl:text-5xl text-3xl  font-semibold">
           WELCOME TO ELEVENS
         </h1>

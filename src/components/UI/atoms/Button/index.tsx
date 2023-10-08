@@ -16,10 +16,10 @@ export const Button = ({
       {...rest}
       className={`w-full text-base h-[49px] font-normal ${
         fill == true
-          ? "bg-[#495843] text-white border-2 border-[#495843] hover:bg-transparent hover:text-[#495843]"
+          ? "bg-primeryLight text-white border-2 border-primeryLight hover:bg-transparent hover:text-primeryLight"
           : color == "white"
-          ? "bg-transparent  border-2 border-white text-white hover:text-white hover:bg-[#495843]"
-          : "bg-transparent  border-2 border-[#495843] text-[#495843] hover:text-white hover:bg-[#495843]"
+          ? "bg-transparent  border-2 border-white text-white hover:text-white hover:bg-primeryLight"
+          : "bg-transparent  border-2 border-primeryLight text-primeryLight hover:text-white hover:bg-primeryLight"
       } transition duration-200`}
     >
       <p className="mx-[38px]">{children?.toString().toUpperCase()}</p>

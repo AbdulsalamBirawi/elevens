@@ -2,16 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-    font-family: "AppleChancery";
-    src: local("AppleChancery"), url("../src/fonts/AppleChancery.ttf") format("truetype");
+  font-family: "AppleChancery";
+  src: local("AppleChancery"),
+    url("../src/fonts/AppleChancery.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "CopperplateRegular";
-    src: local("CopperplateRegular"), url("../src/fonts/CopperplateRegular.ttf") format("truetype");
+  font-family: "CopperplateRegular";
+  src: local("CopperplateRegular"),
+    url("../src/fonts/CopperplateRegular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "NeulisAlt-Regular";
-    src: local("NeulisAlt-Regular"), url("../src/fonts/NeulisAlt-Regular.otf") format("opentype");
+  font-family: "NeulisAlt-Regular";
+  src: local("NeulisAlt-Regular"),
+    url("../src/fonts/NeulisAlt-Regular.otf") format("opentype");
+}
+* {
+  font-family: "NeulisAlt-Regular";
+}
+
+.title {
+  font-family: "CopperplateRegular";
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #849679 !important;
 }

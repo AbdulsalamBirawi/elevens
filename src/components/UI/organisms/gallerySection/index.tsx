@@ -43,7 +43,7 @@ export const GallerySection = ({ houseDetails = false }) => {
     <div className="relative">
       <Image
         alt="victor"
-        className="absolute -mt-24 z-0 top-60 left-0"
+        className="absolute -mt-24 z-0 top-60 right-0 w-[500px]"
         src={Victor}
       />
       {houseDetails ? (
@@ -84,7 +84,7 @@ export const GallerySection = ({ houseDetails = false }) => {
         >
           {cards.map((card, idx) => (
             <SwiperSlide key={idx}>
-              <Link href={"houseDetails/1"}>
+              <Link href={"/houseDetails/1"}>
                 <GalleryCard
                   cost={card.cost}
                   images={card.images}
@@ -92,6 +92,7 @@ export const GallerySection = ({ houseDetails = false }) => {
                   room={card.room}
                   title={card.title}
                   type={card.type}
+                  id={idx}
                 />
               </Link>
             </SwiperSlide>

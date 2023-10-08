@@ -5,5 +5,5 @@ type props = {
 };
 
 export const Container = ({ children }: props) => {
-  return <div className=" px-5 xl:px-[140px]">{children}</div>;
+  return <div className=" px-5 xl:px-[180px]">{children}</div>;
 };
