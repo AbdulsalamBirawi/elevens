@@ -11,7 +11,7 @@ export const Footer = () => {
             <div className="w-52 flex   mb-5 items-center ">
               <Logo dark={false} />
             </div>
-            <p className="text-white text-center xl:text-start lg:text-start font-semibold mb-10 text-base">
+            <p className="text-white text-center xl:text-start lg:text-start font-light mb-10 text-base">
               Welcome to ELEVENS, Maadi’s premier residence building, where
               sophisticated living meets modern design. Nestled in the heart of
               Maadi, one of Cairo’s most sought-after neighborhoods, ELEVENS
