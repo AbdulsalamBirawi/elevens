@@ -72,7 +72,7 @@ export const GalleryCard = ({
         ))}
       </Swiper>
 
-      <h2 className=" text-black font-normal text-2xl my-3">{title}</h2>
+      <h2 className=" text-black font-normal text-lg my-3">{title}</h2>
       <h2 className=" text-tertiary font-normal text-base mb-3">{type}</h2>
       <div className="flex items-center mb-3 w-full justify-between">
         <h2 className="text-secondary font-semibold text-[32px]">

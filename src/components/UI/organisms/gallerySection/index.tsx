@@ -49,12 +49,12 @@ export const GallerySection = ({ houseDetails = false }) => {
       {houseDetails ? (
         <Container>
           <div className="m-auto my-10">
-            <Title>PROPERTY GALLERY</Title>
+            <Title>property gallery </Title>
           </div>
         </Container>
       ) : (
         <div className="m-auto my-10 text-center">
-          <Title>PROPERTY GALLERY</Title>
+          <Title>property gallery</Title>
         </div>
       )}
 

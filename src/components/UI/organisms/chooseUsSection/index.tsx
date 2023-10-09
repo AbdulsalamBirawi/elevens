@@ -43,7 +43,7 @@ export const ChooseUsSection = () => {
           <div className=" xl:w-2/3 lg:w-2/3 w-full   h-full">
             <div className=" m-10 ">
               <div className="mb-10">
-                <Title>WHY CHOOSE US</Title>
+                <Title>why choose us</Title>
               </div>
               <div className="  flex flex-wrap     gap-y-14 lg:justify-start xl:justify-start justify-center gap-x-24 ">
                 {cards.map((card, idx) => (

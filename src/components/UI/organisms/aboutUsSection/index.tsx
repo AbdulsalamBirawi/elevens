@@ -24,7 +24,7 @@ export const AboutUsSection = () => {
         <div className=" lg:flex xl:flex block    w-full mt-24 z-20 h-full">
           <div className=" xl:w-1/2 lg:w-1/2 w-full   h-full">
             <div className="  mt-5 mr-5">
-              <Title>About Us</Title>
+              <Title>about us</Title>
               <Description>
                 Welcome to ELEVENS, Maadi’s premier residence building, where
                 sophisticated living meets modern design. Nestled in the heart
