@@ -7,12 +7,20 @@ import Link from "next/link";
 
 type props = {
   textColor: string;
+  sectionId: string;
 };
 
-export const NavbarLinks = ({ textColor }: props) => {
+export const NavbarLinks = ({ textColor, sectionId }: props) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [activeIdx, setActiveIdx] = useState<number>(-1);
   const router = useRouter();
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   useEffect(() => {
     const path = router.asPath.split("?")[0];
     const activeIdx = links.findIndex((e) => {
@@ -47,9 +55,7 @@ export const NavbarLinks = ({ textColor }: props) => {
               <Button
                 fill={false}
                 color={""}
-                onClick={() => {
-                  router.push("/contactUs");
-                }}
+                onClick={() => scrollToSection(sectionId)}
               >
                 contact us
               </Button>

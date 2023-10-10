@@ -1,12 +1,15 @@
 import React from "react";
-import ContactImage from "../../../../assets/conatctInfo.jpg";
+import ContactImage from "../../../../assets/contactUs.jpg";
 import Image from "next/image";
 import { Button, Container, Input, Logo, TextArea } from "../../atoms";
 import { ContactUsInfo, SocialLinks } from "../../molecules";
 import icon from "../../../../assets/Framed Icon-01.png";
 export const ContactInfo = () => {
   return (
-    <div className=" mt-14 min-h-screen  relative  bg-cover bg-center">
+    <div
+      id="contactUs"
+      className=" mt-14 min-h-screen  relative  bg-cover bg-center"
+    >
       <Image
         src={ContactImage.src}
         alt="Background Image"

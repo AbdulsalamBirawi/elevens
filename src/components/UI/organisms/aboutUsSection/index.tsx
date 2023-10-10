@@ -10,20 +10,22 @@ import {
 } from "../../atoms";
 import AboutUsImage from "../../../../assets/aboutusimage.png";
 import ImageTop from "../../../../assets/imageTop.svg";
-import ImageBottom from "../../../../assets/imageBottom.svg";
+import ImageBottom from "../../../../assets/aboutUs.jpg";
+import { useRouter } from "next/router";
 
 export const AboutUsSection = () => {
+  const router = useRouter();
   return (
     <Container>
-      <div className="relative  ">
+      <div id="aboutUs" className="relative  ">
         <Image
           alt="victor"
-          className="absolute w-[500px] -mt-24 z-0 top-0 left-0-0"
+          className="absolute w-[500px] -mt-24 z-0 top-0 right-0"
           src={Victor}
         />
         <div className=" lg:flex xl:flex block    w-full mt-24 z-20 h-full">
           <div className=" xl:w-1/2 lg:w-1/2 w-full   h-full">
-            <div className="  mt-5 mr-5">
+            <div className=" z-20 mt-5 mr-5">
               <Title>about us</Title>
               <Description>
                 Welcome to ELEVENS, Maadi’s premier residence building, where
@@ -42,8 +44,12 @@ export const AboutUsSection = () => {
                 that is both inviting and inspiring.
               </Description>
             </div>
-            <div className=" my-5 w-64">
-              <Button fill={false} color="green">
+            <div className=" z-20 my-5 w-64">
+              <Button
+                onClick={() => router.push("/allProperties")}
+                fill={false}
+                color="green"
+              >
                 LEARN MORE
               </Button>
             </div>
@@ -58,7 +64,7 @@ export const AboutUsSection = () => {
             <Image
               objectFit="cover"
               className="w-full  p-5 xl:p-0 lg:p-0  h-full"
-              src={AboutUsImage.src}
+              src={ImageBottom.src}
               width={700}
               height={700}
               alt="about us"

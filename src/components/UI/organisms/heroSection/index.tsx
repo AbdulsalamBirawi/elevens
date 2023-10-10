@@ -3,8 +3,10 @@ import HeroImage from "../../../../assets/hero.jpg";
 import Image from "next/image";
 import { Button, TitleDesign } from "../../atoms";
 import Icon from "../../../../assets/Framed Icon-02.png";
+import { useRouter } from "next/router";
 
 export const HeroSection = () => {
+  const router = useRouter();
   return (
     <div
       className="   relative h-screen bg-cover bg-center"
@@ -31,7 +33,11 @@ export const HeroSection = () => {
         </h1>
 
         <div className="w-">
-          <Button color="white" fill={false}>
+          <Button
+            onClick={() => router.push("/allProperties")}
+            color="white"
+            fill={false}
+          >
             discover Properties
           </Button>
         </div>

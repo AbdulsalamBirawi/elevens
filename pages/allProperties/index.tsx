@@ -10,95 +10,14 @@ import { Pagination } from "../../src/components/UI/molecules/pagination";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { ContactInfo, Footer, Navbar } from "../../src/components/UI/organisms";
 import Link from "next/link";
+import { cards } from "./data";
 const index = () => {
   const [page, setPage] = useState();
-  const cards = [
-    {
-      cost: 500,
-      images: [Image, Image, Image, Image],
-      link: "/aboutus",
-      room: "Living Area",
-      size: 700,
-      title: "No.Floor:Ground,ID:2",
-      type: "PentHouse",
-    },
-    {
-      cost: 500,
-      images: [Image, Image, Image, Image],
-      link: "/aboutus",
-      room: "Living Area",
-      size: 700,
-      title: "No.Floor:Ground,ID:2",
-      type: "PentHouse",
-    },
-    {
-      cost: 500,
-      images: [Image, Image, Image, Image],
-      link: "/aboutus",
-      room: "Living Area",
-      size: 700,
-      title: "No.Floor:Ground,ID:2",
-      type: "PentHouse",
-    },
-    {
-      cost: 500,
-      images: [Image, Image, Image, Image],
-      link: "/aboutus",
-      room: "Living Area",
-      size: 700,
-      title: "No.Floor:Ground,ID:2",
-      type: "PentHouse",
-    },
-    {
-      cost: 500,
-      images: [Image, Image, Image, Image],
-      link: "/aboutus",
-      room: "Living Area",
-      size: 700,
-      title: "No.Floor:Ground,ID:2",
-      type: "PentHouse",
-    },
-    {
-      cost: 500,
-      images: [Image, Image, Image, Image],
-      link: "/aboutus",
-      room: "Living Area",
-      size: 700,
-      title: "No.Floor:Ground,ID:2",
-      type: "PentHouse",
-    },
-    {
-      cost: 500,
-      images: [Image, Image, Image, Image],
-      link: "/aboutus",
-      room: "Living Area",
-      size: 700,
-      title: "No.Floor:Ground,ID:2",
-      type: "PentHouse",
-    },
-    {
-      cost: 500,
-      images: [Image, Image, Image, Image],
-      link: "/aboutus",
-      room: "Living Area",
-      size: 700,
-      title: "No.Floor:Ground,ID:2",
-      type: "PentHouse",
-    },
-    {
-      cost: 500,
-      images: [Image, Image, Image, Image],
-      link: "/aboutus",
-      room: "Living Area",
-      size: 700,
-      title: "No.Floor:Ground,ID:2",
-      type: "PentHouse",
-    },
-  ];
 
   return (
     <div className="mt-32" style={{ fontFamily: "NeulisAlt-Regular" }}>
-      <Navbar solid />
+      <Navbar sectionId="contactUs" solid />
+
       <Container>
         <Title>Search</Title>
         <SearchBar />
@@ -114,6 +33,7 @@ const index = () => {
                     room={card.room}
                     title={card.title}
                     type={card.type}
+                    id={idx}
                   />
                 </Link>
               </div>

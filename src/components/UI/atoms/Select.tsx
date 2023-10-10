@@ -1,19 +1,25 @@
 import React from "react";
 import SS from "react-select";
 
-const Select = () => {
-  const ss = [
-    { value: "any", label: "Any" },
-    { value: "chocolate", label: "Alzamalek" },
-    { value: "strawberry", label: "maadi" },
-    { value: "vanilla", label: "new cairo" },
-    { value: "vanilla", label: "5th" },
-  ];
+type values = {
+  values: any[];
+  placeholder: string;
+};
+
+const Select = ({ values, placeholder }: values) => {
+  // const ss = [
+  //   { value: "any", label: "Any" },
+  //   { value: "chocolate", label: "Alzamalek" },
+  //   { value: "strawberry", label: "maadi" },
+  //   { value: "vanilla", label: "new cairo" },
+  //   { value: "vanilla", label: "5th" },
+  // ];
 
   return (
     <div className=" relative  w-full ">
       <SS
-        options={ss}
+        placeholder={placeholder}
+        options={values}
         hideSelectedOptions
         styles={{
           indicatorSeparator: () => {},

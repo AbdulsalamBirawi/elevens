@@ -29,3 +29,28 @@
 .swiper-pagination-bullet-active {
   background-color: #849679 !important;
 }
+
+.CalendarDay__selected_span {
+  background: #849679 !important;
+  color: white;
+  border: 1px solid white !important;
+}
+
+/* // Will edit selected date or the endpoints of a range of dates */
+.CalendarDay__selected {
+  background: #849679 !important;
+
+  border: 1px solid white !important;
+  color: white;
+}
+
+/* // Will edit when hovered over. _span style also has this property */
+.CalendarDay__selected:hover {
+  background: #495843 !important;
+  color: white;
+}
+
+.CalendarDay__hovered_span:hover,
+.CalendarDay__hovered_span {
+  background: #dde0e1 !important;
+}

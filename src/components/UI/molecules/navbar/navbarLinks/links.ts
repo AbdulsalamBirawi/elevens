@@ -12,11 +12,11 @@ export const links: links[] = [
   },
   {
     text: "About Us",
-    link: "/aboutUs",
+    link: "#aboutUs",
   },
   {
     text: "All Properties",
     link: "/allProperties",
   },
-  { text: "Contact Us", link: "/contactUs" },
+  { text: "Contact Us", link: "#contactUs" },
 ];

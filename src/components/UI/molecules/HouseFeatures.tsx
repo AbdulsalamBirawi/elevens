@@ -1,6 +1,8 @@
 import React from "react";
 import { FaWifi } from "react-icons/fa6";
 import { FaLeaf } from "react-icons/fa6";
+import { HiOutlineComputerDesktop } from "react-icons/hi2";
+import { BiSolidWasher } from "react-icons/bi";
 const HouseFeatures = () => {
   const a = [
     {
@@ -8,69 +10,29 @@ const HouseFeatures = () => {
       icon: FaWifi,
     },
     {
-      title: "Garden View",
+      title: "Garden ",
       icon: FaLeaf,
     },
     {
-      title: "Wi fi",
-      icon: FaWifi,
+      title: "TV",
+      icon: HiOutlineComputerDesktop,
     },
     {
-      title: "Garden View",
-      icon: FaLeaf,
-    },
-    {
-      title: "Wi fi",
-      icon: FaWifi,
-    },
-    {
-      title: "Garden View",
-      icon: FaLeaf,
-    },
-    {
-      title: "Wi fi",
-      icon: FaWifi,
-    },
-    {
-      title: "Garden View",
-      icon: FaLeaf,
-    },
-    {
-      title: "Wi fi",
-      icon: FaWifi,
-    },
-    {
-      title: "Garden View",
-      icon: FaLeaf,
-    },
-    {
-      title: "Wi fi",
-      icon: FaWifi,
-    },
-    {
-      title: "Garden View",
-      icon: FaLeaf,
-    },
-    {
-      title: "Wi fi",
-      icon: FaWifi,
-    },
-    {
-      title: "Garden View",
-      icon: FaLeaf,
+      title: "Washer",
+      icon: BiSolidWasher,
     },
   ];
 
   return (
     <div className=" py-6   border-b-2 border-gray-200">
-      <h2 className="text-3xl font-bold mb-10">Property Features</h2>
+      <h2 className="text-2xl font-bold mb-10">What this place offers</h2>
 
-      <ul className="flex flex-wrap gap-1  text-lg">
+      <ul className="flex  w-72 flex-wrap gap-x-10    text-lg">
         {a.map((e) => {
           return (
             <li
               key={e.title}
-              className=" py-3 basis-1/3 sm:basis-1/4 lg:basis-1/3 xl:basis-1/4 flex flex-row gap-3 items-center"
+              className=" py-3    flex flex-row gap-3 items-center"
             >
               <e.icon />
               {e.title}

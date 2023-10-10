@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const HouseDescription = () => {
   return (
-    <div className='  py-6  border-b-2 border-gray-200'>
-              <h2 className='text-3xl font-bold mb-10'>Property Description</h2>
-              <p className='text-lg'>Welcome to ELEVENS, Maadi’s premier residence building, where sophisticated living meets modern design. Nestled in the heart of Maadi, one of Cairo’s most sought-after neighborhoods, ELEVENS stands tall as a beacon of modern luxury and elegance.</p>
+    <div className="  py-6  border-b-2 border-gray-200">
+      <h2 className="text-2xl font-bold mb-10">
+        Entire rental unit in Maadi, Egypt
+      </h2>
+      <p className="text-lg">2 guests1 bedroom1 bed1 bath</p>
     </div>
-  )
-}
+  );
+};
 
-export default HouseDescription
+export default HouseDescription;

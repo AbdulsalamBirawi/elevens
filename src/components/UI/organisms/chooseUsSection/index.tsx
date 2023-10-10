@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Container, Title, TitleDesign } from "../../atoms";
-import ChooseUsImage from "../../../../assets/choose-ussvg.svg";
+import ChooseUsImage from "../../../../assets/chooseUs.jpg";
 import ImageTop from "../../../../assets/imageTop.svg";
 
 import { FaMoneyBill1, FaMobileScreenButton } from "react-icons/fa6";

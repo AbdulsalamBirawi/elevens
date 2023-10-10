@@ -1,4 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+import Image1 from "../../../src/assets/1.jpg";
+import Image2 from "../../../src/assets/3.jpg";
+import Image3 from "../../../src/assets/4.jpg";
+import Image4 from "../../../src/assets/5.jpg";
+import Image5 from "../../../src/assets/6.jpg";
 import React, {
   useCallback,
   useEffect,
@@ -16,6 +21,9 @@ import HousePlan from "../../../src/components/UI/molecules/HousePlan";
 import HouseForm from "../../../src/components/UI/molecules/HouseForm";
 import GridVideos from "../../../src/components/UI/molecules/GridVideos";
 import VideosGallery from "../../../src/components/UI/molecules/VideosGallery";
+import imageHost from "../../../src/assets/Unframed Icon-01.png";
+import "react-dates/initialize";
+import "react-dates/lib/css/_datepicker.css";
 import {
   ContactInfo,
   Footer,
@@ -23,6 +31,7 @@ import {
   Navbar,
 } from "../../../src/components/UI/organisms";
 import { Container, Title } from "../../../src/components/UI/atoms";
+import Image from "next/image";
 
 const index = () => {
   const [startIndex, setStartIndex] = useState(2);
@@ -64,28 +73,28 @@ const index = () => {
 
   const images = [
     {
-      original: "https://picsum.photos/id/1018/1000/600/",
-      thumbnail: "https://picsum.photos/id/1018/250/150/",
+      original: Image1.src,
+      thumbnail: Image1.src,
     },
     {
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
+      original: Image2.src,
+      thumbnail: Image2.src,
     },
     {
-      original: "https://picsum.photos/id/1019/1000/600/",
-      thumbnail: "https://picsum.photos/id/1019/250/150/",
+      original: Image3.src,
+      thumbnail: Image3.src,
     },
     {
-      original: "https://picsum.photos/id/1018/1000/600/",
-      thumbnail: "https://picsum.photos/id/1018/250/150/",
+      original: Image4.src,
+      thumbnail: Image4.src,
     },
     {
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
+      original: Image5.src,
+      thumbnail: Image5.src,
     },
     {
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
+      original: Image5.src,
+      thumbnail: Image5.src,
     },
   ];
 
@@ -93,36 +102,36 @@ const index = () => {
     {
       embedUrl:
         "https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0",
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/1000/600/",
+      original: Image1.src,
+      thumbnail: Image1.src,
       renderItem: renderVideo.bind(this),
     },
     {
       embedUrl:
         "https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0",
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/1000/600/",
+      original: Image2.src,
+      thumbnail: Image2.src,
       renderItem: renderVideo.bind(this),
     },
     {
       embedUrl:
         "https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0",
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/1000/600/",
+      original: Image3.src,
+      thumbnail: Image3.src,
       renderItem: renderVideo.bind(this),
     },
     {
       embedUrl:
         "https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0",
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/1000/600/",
+      original: Image4.src,
+      thumbnail: Image4.src,
       renderItem: renderVideo.bind(this),
     },
     {
       embedUrl:
         "https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0",
-      original: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/1000/600/",
+      original: Image5.src,
+      thumbnail: Image5.src,
       renderItem: renderVideo.bind(this),
     },
   ];
@@ -157,13 +166,29 @@ const index = () => {
           handelStartIndex={handelStartIndex}
         />
         <div className=" flex flex-col lg:flex-row  justify-start items-start gap-7">
+          <HouseForm />
           <div className=" w-[100%] lg:w-[70%] xl:w-[100%]">
             <HouseDescription />
+            <div className="w-full border-b-2 border-gray-200 py-5 items-center flex justify-start ">
+              <div className="rounded-full w-14 h-14 p-2 bg-slate-200">
+                <Image src={imageHost} alt="sd" />
+              </div>
+              <div className="mx-2 ">
+                <p className="text-base font-semibold text-black">
+                  Hosted by Elevens
+                </p>
+                <p className="text-sm text-gray-300 font-light">New Host</p>
+              </div>
+            </div>
+            <p className="text-lg py-5 border-b-2 border-gray-200">
+              Welcome to ELEVENS, Maadi’s premier residence building, where
+              sophisticated living meets modern design. Nestled in the heart of
+              Maadi, one of Cairo’s most sought-after neighborhoods, ELEVENS
+              stands tall as a beacon of modern luxury and elegance.
+            </p>
             <HouseFeatures />
-            <HousePlan />
+            {/* <HousePlan /> */}
           </div>
-
-          <HouseForm />
         </div>
         <div className="   ">
           <GridVideos

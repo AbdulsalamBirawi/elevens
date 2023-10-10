@@ -43,7 +43,7 @@ export const GallerySection = ({ houseDetails = false }) => {
     <div className="relative">
       <Image
         alt="victor"
-        className="absolute -mt-24 z-0 top-60 right-0 w-[500px]"
+        className="absolute -mt-24 z-0 top-60 left-0 w-[400px]"
         src={Victor}
       />
       {houseDetails ? (
@@ -60,12 +60,8 @@ export const GallerySection = ({ houseDetails = false }) => {
 
       <Container>
         <Swiper
-          loop={true}
-          autoplay
           spaceBetween={60}
           style={{ padding: "30px" }}
-          modules={[Autoplay, Zoom]}
-          zoom={true}
           breakpoints={{
             // when window width is >= 576px
             576: {
@@ -85,17 +81,15 @@ export const GallerySection = ({ houseDetails = false }) => {
         >
           {cards.map((card, idx) => (
             <SwiperSlide key={idx}>
-              <Link href={"/houseDetails/1"}>
-                <GalleryCard
-                  cost={card.cost}
-                  images={card.images}
-                  link={card.link}
-                  room={card.room}
-                  title={card.title}
-                  type={card.type}
-                  id={idx}
-                />
-              </Link>
+              <GalleryCard
+                cost={card.cost}
+                images={card.images}
+                link={card.link}
+                room={card.room}
+                title={card.title}
+                type={card.type}
+                id={idx}
+              />
             </SwiperSlide>
           ))}
 

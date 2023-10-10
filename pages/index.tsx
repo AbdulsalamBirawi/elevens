@@ -18,7 +18,7 @@ export default function Home() {
   ];
   return (
     <div className=" h-[200vh] ">
-      <Navbar solid={false} />
+      <Navbar sectionId="contactUs" solid={false} />
       <HeroSection />
       <AboutUsSection />
       <GallerySection />

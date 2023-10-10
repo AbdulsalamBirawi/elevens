@@ -7,3 +7,4 @@ export { Description } from "./description";
 export { TitleDesign } from "./titleDesign";
 export { Input } from "./input";
 export { TextArea } from "./textArea";
+export { Dropdown } from "./dropdown";
