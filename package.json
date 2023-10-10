@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "if [ \"$IGNORE_BUILD_ERRORS\" = \"true\" ]; then npm run build-with-errors; else npm run build; fi"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.6",
