@@ -4,18 +4,18 @@ import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 export const SocialLinks = () => {
   return (
-    <div className="flex gap-7">
+    <div className=" flex gap-7">
       <Link href={"facebook"}>
-        <BsFacebook className="text-white text-2xl" />
+        <BsFacebook className=" transition duration-75  hover:duration-300 iconSocial  text-white text-2xl" />
       </Link>
       <Link href={"facebook"}>
-        <BsTwitter className="text-white text-2xl" />
+        <BsTwitter className=" transition duration-75  hover:duration-300 iconSocial text-white text-2xl" />
       </Link>
       <Link href={"facebook"}>
-        <BsInstagram className="text-white text-2xl" />
+        <BsInstagram className="  transition duration-75  hover:duration-300 iconSocial  text-white text-2xl" />
       </Link>
       <Link href={"facebook"}>
-        <BsLinkedin className="text-white text-2xl" />
+        <BsLinkedin className="transition duration-75  hover:duration-300 iconSocial text-white text-2xl" />
       </Link>
     </div>
   );

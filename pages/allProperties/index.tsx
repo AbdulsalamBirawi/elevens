@@ -1,13 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 import { Button, Container, Title } from "../../src/components/UI/atoms";
-
 import SearchBar from "../../src/components/UI/organisms/searchBar/index";
 import { GalleryCard } from "../../src/components/UI/molecules";
-
-import Image from "../../src/assets/aboutusimage.png";
 import { Pagination } from "../../src/components/UI/molecules/pagination";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { ContactInfo, Footer, Navbar } from "../../src/components/UI/organisms";
 import Link from "next/link";
 import { cards } from "./data";

@@ -21,8 +21,19 @@ export const ContactInfo = () => {
       <div className="absolute  inset-0   bg-black  z-0 opacity-50 "></div>
       <Container>
         <div className="relative lg:flex block z-10 xl:flex justify-between">
-          <div className=" mt-[120px]">
-            <div className="mb-10">
+          <div className=" mt-[140px] w-1/2">
+            <div className="w-full flex flex-col lg:items-start items-center xl:items-start px-10">
+              <div className="w- flex   mb-5 items-center ">
+                <Logo dark={false} />
+              </div>
+              <p className="text-white w-full text-center xl:text-start lg:text-start font-light mb-10 text-base">
+                Welcome to ELEVENS, Maadi’s premier residence building, where
+                sophisticated living meets modern design. Nestled in the heart
+                of Maadi, one of Cairo’s most sought-after neighborhoods,
+                ELEVENS stands tall as a beacon of modern luxury and elegance.
+              </p>
+            </div>
+            {/* <div className="mb-10">
               <h2 className="text-white text-center text-2xl font-bold">
                 Contact Information
               </h2>
@@ -41,7 +52,7 @@ export const ContactInfo = () => {
                 Social media
               </p>
               <SocialLinks />
-            </div>
+            </div> */}
           </div>
           <div className=" relative pb-20  lg:w-1/2 xl:w-1/2 w-full mt-[83px]  p-10">
             <div className="absolute inset-0    bg-black  z-0 opacity-50 "></div>

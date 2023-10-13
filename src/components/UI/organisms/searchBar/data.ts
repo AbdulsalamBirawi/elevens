@@ -11,7 +11,7 @@ export const select2 = [
   { value: "chocolate", label: "One Bedroom" },
   { value: "strawberry", label: "Studio" },
   { value: "vanilla", label: "Penta House" },
-  { value: "vanilla", label: "Triplex" },
+  { value: "vanilla", label: "Loft" },
 ];
 
 // guestType,
@@ -24,24 +24,12 @@ export const guests = [
     title: "Adults",
     guestType: "Age 13+",
     counterStart: 1,
-    counterEnd: 2,
+    counterEnd: 3,
   },
   {
     title: "Children",
     guestType: "Ages 2–12",
     counterStart: 0,
-    counterEnd: 2,
-  },
-  {
-    title: "Infants",
-    guestType: "under 2",
-    counterStart: 0,
-    counterEnd: 2,
-  },
-  {
-    title: "Pets",
-    guestType: " ",
-    counterStart: 0,
-    counterEnd: 2,
+    counterEnd: 3,
   },
 ];

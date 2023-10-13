@@ -18,5 +18,4 @@ export const links: links[] = [
     text: "All Properties",
     link: "/allProperties",
   },
-  { text: "Contact Us", link: "#contactUs" },
 ];
