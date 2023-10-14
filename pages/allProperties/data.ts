@@ -3,7 +3,7 @@ export const cards = [
   {
     cost: 100,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -11,7 +11,7 @@ export const cards = [
   {
     cost: 100,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -19,7 +19,7 @@ export const cards = [
   {
     cost: 100,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -27,7 +27,7 @@ export const cards = [
   {
     cost: 100,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -35,7 +35,7 @@ export const cards = [
   {
     cost: 100,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -43,7 +43,7 @@ export const cards = [
   {
     cost: 100,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -51,7 +51,7 @@ export const cards = [
   {
     cost: 100,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -59,7 +59,7 @@ export const cards = [
   {
     cost: 100,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -67,7 +67,7 @@ export const cards = [
   {
     cost: 150,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "2 beds",
     title: "Apartment in maadi",
     type: "Elevens one bedroom",
@@ -75,7 +75,7 @@ export const cards = [
   {
     cost: 150,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "2 beds",
     title: "Apartment in maadi",
     type: "Elevens one bedroom",
@@ -83,7 +83,7 @@ export const cards = [
   {
     cost: 150,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "2 beds",
     title: "Apartment in maadi",
     type: "Elevens one bedroom",
@@ -91,7 +91,7 @@ export const cards = [
   {
     cost: 150,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "2 beds",
     title: "Apartment in maadi",
     type: "Elevens one bedroom",
@@ -99,7 +99,7 @@ export const cards = [
   {
     cost: 150,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "2 beds",
     title: "Apartment in maadi",
     type: "Elevens one bedroom",
@@ -107,7 +107,7 @@ export const cards = [
   {
     cost: 150,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "2 beds",
     title: "Apartment in maadi",
     type: "Elevens one bedroom",
@@ -115,7 +115,7 @@ export const cards = [
   {
     cost: 150,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "2 beds",
     title: "Apartment in maadi",
     type: "Elevens one bedroom",
@@ -123,7 +123,7 @@ export const cards = [
   {
     cost: 150,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "2 beds",
     title: "Apartment in maadi",
     type: "Elevens one bedroom",
@@ -131,7 +131,7 @@ export const cards = [
   {
     cost: 150,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "2 beds",
     title: "Apartment in maadi",
     type: "Elevens one bedroom",
@@ -139,7 +139,7 @@ export const cards = [
   {
     cost: 150,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "2 beds",
     title: "Apartment in maadi",
     type: "Elevens one bedroom",
@@ -147,7 +147,7 @@ export const cards = [
   {
     cost: 200,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "3 beds",
     title: "Apartment in maadi",
     type: "Elevens  triplex",
@@ -155,7 +155,7 @@ export const cards = [
   {
     cost: 200,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "3 beds",
     title: "Apartment in maadi",
     type: "Elevens  triplex",
@@ -163,7 +163,7 @@ export const cards = [
   {
     cost: 200,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "4 beds",
     title: "Apartment in maadi",
     type: "Elevens  pentahouse",
@@ -171,7 +171,7 @@ export const cards = [
   {
     cost: 200,
     images: [Image, Image, Image, Image],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "4 beds",
     title: "Apartment in maadi",
     type: "Elevens  pentahouse",

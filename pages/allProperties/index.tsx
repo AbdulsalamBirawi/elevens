@@ -21,17 +21,15 @@ const index = () => {
           {cards.map((card, idx) => {
             return (
               <div key={idx} className=" w-full lg:max-w-xs  ">
-                <Link href={"houseDetails/1"}>
-                  <GalleryCard
-                    cost={card.cost}
-                    images={card.images}
-                    link={card.link}
-                    room={card.room}
-                    title={card.title}
-                    type={card.type}
-                    id={idx}
-                  />
-                </Link>
+                <GalleryCard
+                  cost={card.cost}
+                  images={card.images}
+                  link={card.link}
+                  room={card.room}
+                  title={card.title}
+                  type={card.type}
+                  id={idx}
+                />
               </div>
             );
           })}

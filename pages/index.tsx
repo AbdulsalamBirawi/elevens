@@ -22,7 +22,6 @@ export default function Home() {
       <HeroSection />
       <AboutUsSection />
       <GallerySection />
-
       <ChooseUsSection />
       <ContactInfo />
 
