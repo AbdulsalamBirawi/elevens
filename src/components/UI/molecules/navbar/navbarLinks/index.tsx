@@ -31,10 +31,10 @@ export const NavbarLinks = ({ textColor, sectionId }: props) => {
   return (
     <div>
       <Container>
-        <div className="flex justify-between">
+        <div className="flex  justify-between">
           <div className="flex items-center  gap-x-5">
             <div className="w-32 flex items-center h-full">
-              <Logo dark={false} />
+              <Logo dark={true} />
             </div>
 
             <div className="hidden lg:flex xl:flex gap-x-5">

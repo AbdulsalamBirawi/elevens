@@ -4,7 +4,7 @@ import { ContactUsInfo, SocialLinks } from "../../molecules";
 
 export const Footer = () => {
   return (
-    <footer className="bg-black py-10 ">
+    <footer className="bg-black absolute w-full py-10 ">
       <Container>
         <div className="lg:flex xl:flex justify-center  block gap-32 ">
           {/* <div className="w-full flex flex-col lg:items-start items-center xl:items-start xl:w-1/3 lg:w-1/3">

@@ -33,7 +33,7 @@ export const GalleryCard = ({
   const router = useRouter();
 
   return (
-    <div className="flex flex-col relative   w-full lg:max-w-sm  bg-white items-start justify-center">
+    <div className="flex flex-col relative   w-full lg:max-w-sm   items-start justify-center">
       <Swiper
         style={{ height: "400px" }}
         modules={[Pagination, Navigation]}

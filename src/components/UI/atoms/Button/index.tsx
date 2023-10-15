@@ -16,7 +16,7 @@ export const Button = ({
   return (
     <button
       {...rest}
-      className={`w-full text-base h-[49px] font-normal ${
+      className={`w-full text-sm h-[49px] font-normal ${
         fill
           ? "bg-primery text-white border-2 border-primery hover:bg-transparent hover:text-primery transition duration-200"
           : hover

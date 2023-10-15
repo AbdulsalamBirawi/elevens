@@ -41,20 +41,20 @@ const SwiperButtonPrev = ({ children }: any) => {
 export const GallerySection = ({ houseDetails = false }) => {
   return (
     <div className="relative">
-      <Image
+      {/* <Image
         alt="victor"
         className="absolute -mt-24 z-0 top-60 left-0 w-[400px]"
         src={Victor}
-      />
+      /> */}
       {houseDetails ? (
         <Container>
           <div className="m-auto my-10">
-            <Title>property gallery </Title>
+            <Title> PROPERTY GALLERY </Title>
           </div>
         </Container>
       ) : (
         <div className="m-auto my-10 text-center">
-          <Title>property gallery</Title>
+          <Title> PROPERTY GALLERY </Title>
         </div>
       )}
 

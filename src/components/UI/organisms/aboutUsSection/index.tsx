@@ -12,17 +12,12 @@ import AboutUsImage from "../../../../assets/aboutusimage.png";
 import ImageTop from "../../../../assets/imageTop.svg";
 import ImageBottom from "../../../../assets/aboutus22.jpg";
 import { useRouter } from "next/router";
-
+import Image2 from "../../../../assets/Background-01-01.png";
 export const AboutUsSection = () => {
   const router = useRouter();
   return (
     <Container>
       <div id="aboutUs" className="relative  ">
-        <Image
-          alt="victor"
-          className="absolute w-[500px] -mt-24 z-0 top-0 right-0"
-          src={Victor}
-        />
         <div className=" lg:flex xl:flex block    w-full mt-24 z-20 h-full">
           <div className=" xl:w-1/2 lg:w-1/2 w-full   h-full">
             <div className=" z-20 mt-5 mr-5">

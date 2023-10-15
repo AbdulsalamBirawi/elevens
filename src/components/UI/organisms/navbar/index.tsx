@@ -14,10 +14,10 @@ export const Navbar = ({ solid, sectionId }: props) => {
   useEffect(() => {
     const handleScroll = () => {
       if (solid) {
-        setNavbarBackground("bg-white shadow-md");
+        setNavbarBackground("backdrop-blur-xl bg-white/30  ");
         setLiTextColor("text-primery");
       } else if (window.scrollY > 100) {
-        setNavbarBackground("bg-white shadow-md");
+        setNavbarBackground("backdrop-blur-xl bg-white/30 ");
         setLiTextColor("text-primery");
         setIsTop(false);
       } else {
@@ -35,7 +35,7 @@ export const Navbar = ({ solid, sectionId }: props) => {
   }, []);
   return (
     <nav
-      className={`fixed w-full  top-0 z-50 p-4 transition  duration-300 ease-in-out ${navbarBackground} ${
+      className={`fixed w-full  top-0 z-50 p-4   transition     duration-300 ease-in-out ${navbarBackground} ${
         isTop ? "border-none" : "border-b"
       } border-gray-300`}
     >
