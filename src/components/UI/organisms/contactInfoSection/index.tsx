@@ -4,7 +4,31 @@ import Image from "next/image";
 import { Button, Container, Input, Logo, TextArea } from "../../atoms";
 import { ContactUsInfo, SocialLinks } from "../../molecules";
 import icon from "../../../../assets/Framed Icon-01.png";
+import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { contactUsInfo } from "../../../../../lib/services/types";
+import { useCreateContactUsInfoMutation } from "../../../../../lib/services/backendApi";
 export const ContactInfo = () => {
+  const {
+    control,
+    handleSubmit,
+    formState: { isSubmitting },
+  } = useForm<contactUsInfo>({
+    defaultValues: {
+      email: "",
+      firstName: "",
+      lastName: "",
+      message: "",
+      phone: "",
+    },
+  });
+
+  const [createContactUs] = useCreateContactUsInfoMutation();
+
+  const onSubmit: SubmitHandler<contactUsInfo> = (data) => {
+    console.log(data);
+    createContactUs(data);
+  };
+
   return (
     <div
       id="contactUs"
@@ -56,33 +80,62 @@ export const ContactInfo = () => {
           </div>
           <div className=" relative pb-20  lg:w-1/2 xl:w-1/2 w-full mt-[83px]  p-10">
             <div className="absolute inset-0    bg-black  z-0 opacity-50 "></div>
-            <form className="relative">
+            <form onSubmit={handleSubmit(onSubmit)} className="relative">
               <div className=" xl:flex lg:flex block gap-8">
                 <div className=" w-full">
-                  <Input
-                    label="FIRST NAME"
-                    inputProps={{ placeholder: "first name" }}
+                  <Controller
+                    name="firstName"
+                    control={control}
+                    render={({ field }) => (
+                      <Input
+                        label="FIRST NAME"
+                        inputProps={{ ...field, placeholder: "first name" }}
+                      />
+                    )}
                   />
-                  <Input
-                    label="LAST NAME"
-                    inputProps={{ placeholder: "first name" }}
+                  <Controller
+                    name="lastName"
+                    control={control}
+                    render={({ field }) => (
+                      <Input
+                        label="LAST NAME"
+                        inputProps={{ ...field, placeholder: "first name" }}
+                      />
+                    )}
                   />
                 </div>
                 <div className="w-full">
-                  <Input
-                    label="EMAIL ADDRESS"
-                    inputProps={{ placeholder: "first name" }}
+                  <Controller
+                    name="email"
+                    control={control}
+                    render={({ field }) => (
+                      <Input
+                        label="EMAIL ADDRESS"
+                        inputProps={{ ...field, placeholder: "first name" }}
+                      />
+                    )}
                   />
-                  <Input
-                    label="PHONE NUMBER"
-                    inputProps={{ placeholder: "first name" }}
+                  <Controller
+                    name="phone"
+                    control={control}
+                    render={({ field }) => (
+                      <Input
+                        label="PHONE NUMBER"
+                        inputProps={{ ...field, placeholder: "first name" }}
+                      />
+                    )}
                   />
                 </div>
               </div>
-              <TextArea placeholder="MESSAGE" />
-
+              <Controller
+                name="message"
+                control={control}
+                render={({ field }) => (
+                  <TextArea {...field} placeholder="MESSAGE" />
+                )}
+              />
               <div className="absolute  xl:left-[30%] lg:lef-[30%] left-[25%]   w-52 ">
-                <Button color="green" fill>
+                <Button type="submit" color="green" fill>
                   send message
                 </Button>
               </div>

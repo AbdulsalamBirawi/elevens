@@ -6,8 +6,10 @@ import {
 import { BASE_API_URL } from "../../constants/settings";
 
 import { HYDRATE } from "next-redux-wrapper";
-import { contactUsInfo } from "./types";
-import axios, { AxiosError, AxiosRequestConfig } from "axios";
+import { apartments, contactUsInfo } from "./types";
+import { AxiosError, AxiosRequestConfig } from "axios";
+import axios from "./axios";
+
 const baseUrl = BASE_API_URL;
 
 const axiosBaseQuery =
@@ -49,12 +51,25 @@ export const BackendApi = createApi({
   baseQuery: axiosBaseQuery(),
   refetchOnMountOrArgChange: true,
   endpoints: (builder) => ({
-    // createContactUsInfo: builder.mutation<contactUsInfo, JSON>({
-    // 		query: (contactUsInfo) => ({
-    // 			url: '/contact',
-    // 			method: 'POST',
-    // 			body: contactUsInfo,
-    // 		}),
+    createContactUsInfo: builder.mutation<contactUsInfo, any>({
+      query: (contactUsInfo) => ({
+        url: "/contact",
+        method: "POST",
+        body: contactUsInfo,
+      }),
+    }),
+    getApartments: builder.query<apartments, void>({
+      query: () => createRequest(`/apartments`),
+    }),
+    // useGetApartmentById: builder.query<Offer, number>({
+    //   query: (apartmentId) => createRequest(`/offer-request/${apartmentId}`),
+    // }),
   }),
+  extractRehydrationInfo(action, { reducerPath }) {
+    if (action.type === HYDRATE) {
+      return action.payload[reducerPath];
+    }
+  },
 });
-export const {} = BackendApi;
+export const { useCreateContactUsInfoMutation, useGetApartmentsQuery } =
+  BackendApi;

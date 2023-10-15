@@ -12,7 +12,7 @@ import { useSwiper } from "swiper/react";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import Image from "next/image";
-import Link from "next/link";
+import { useGetApartmentsQuery } from "../../../../../lib/services/backendApi";
 
 const SwiperButtonNext = ({ children }: any) => {
   const swiper = useSwiper();
@@ -39,6 +39,9 @@ const SwiperButtonPrev = ({ children }: any) => {
 };
 
 export const GallerySection = ({ houseDetails = false }) => {
+  const { data: apartments } = useGetApartmentsQuery();
+  console.log(apartments);
+
   return (
     <div className="relative">
       <Image
@@ -79,16 +82,11 @@ export const GallerySection = ({ houseDetails = false }) => {
           }}
           className="w-full  h-full"
         >
-          {cards.map((card, idx) => (
+          {apartments?.map((apartment, idx) => (
             <SwiperSlide key={idx}>
               <GalleryCard
-                cost={card.cost}
-                images={card.images}
-                link={card.link}
-                room={card.room}
-                title={card.title}
-                type={card.type}
-                id={idx}
+                apartments={apartment?.apartments}
+                media={apartment?.media}
               />
             </SwiperSlide>
           ))}

@@ -16,7 +16,7 @@ export const cards: Tcards = [
   {
     cost: 100,
     images: [Image1, Image2, Image3, Image4],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -24,7 +24,7 @@ export const cards: Tcards = [
   {
     cost: 100,
     images: [Image1, Image2, Image3, Image4],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -32,7 +32,7 @@ export const cards: Tcards = [
   {
     cost: 100,
     images: [Image1, Image2, Image3, Image4],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -40,7 +40,7 @@ export const cards: Tcards = [
   {
     cost: 100,
     images: [Image1, Image2, Image3, Image4],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -48,7 +48,7 @@ export const cards: Tcards = [
   {
     cost: 100,
     images: [Image1, Image2, Image3, Image4],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -56,7 +56,7 @@ export const cards: Tcards = [
   {
     cost: 100,
     images: [Image1, Image2, Image3, Image4],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",
@@ -64,7 +64,7 @@ export const cards: Tcards = [
   {
     cost: 100,
     images: [Image1, Image2, Image3, Image4],
-    link: "/aboutus",
+    link: "/houseDetails/1",
     room: "1 bed",
     title: "Apartment in maadi",
     type: "Elevens Deluxe King Studio",

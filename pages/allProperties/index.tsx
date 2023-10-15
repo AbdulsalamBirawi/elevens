@@ -7,8 +7,9 @@ import { Pagination } from "../../src/components/UI/molecules/pagination";
 import { ContactInfo, Footer, Navbar } from "../../src/components/UI/organisms";
 import Link from "next/link";
 import { cards } from "./data";
+import { useGetApartmentsQuery } from "../../lib/services/backendApi";
 const index = () => {
-  const [page, setPage] = useState();
+  const { data: apartments } = useGetApartmentsQuery();
 
   return (
     <div className="mt-32" style={{ fontFamily: "NeulisAlt-Regular" }}>
@@ -18,25 +19,20 @@ const index = () => {
         <Title>Search</Title>
         <SearchBar />
         <div className=" flex flex-col lg:flex-row items-center justify-center flex-wrap gap-7 basis-1/3">
-          {cards.map((card, idx) => {
+          {apartments?.map((apartment, idx) => {
             return (
               <div key={idx} className=" w-full lg:max-w-xs  ">
                 <GalleryCard
-                  cost={card.cost}
-                  images={card.images}
-                  link={card.link}
-                  room={card.room}
-                  title={card.title}
-                  type={card.type}
-                  id={idx}
+                  apartments={apartment.apartments}
+                  media={apartment.media}
                 />
               </div>
             );
           })}
         </div>
-        <div className="text-center my-8 ">
+        {/* <div className="text-center my-8 ">
           <Pagination count={18} countPerPage={9} setCurrentPage={setPage} />
-        </div>
+        </div> */}
       </Container>
       <ContactInfo />
       <Footer />
