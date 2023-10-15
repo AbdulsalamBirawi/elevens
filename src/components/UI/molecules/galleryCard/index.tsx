@@ -33,7 +33,7 @@ export const GalleryCard = ({
   const router = useRouter();
 
   return (
-    <div className="flex flex-col relative   w-full lg:max-w-sm   items-start justify-center">
+    <div className="flex flex-col hover:scale-105 transition duration-150   relative   w-full lg:max-w-sm   items-start justify-center">
       <Swiper
         style={{ height: "400px" }}
         modules={[Pagination, Navigation]}
@@ -49,8 +49,8 @@ export const GalleryCard = ({
         className="w-full h-60"
       >
         {images.map((image, idx) => (
-          <div key={idx} className="relative w-full h-full">
-            <SwiperSlide className=" z-10 absolute  h-full" key={idx}>
+          <div key={idx} className="relative    w-full h-full">
+            <SwiperSlide className="  z-10 absolute  h-full" key={idx}>
               <Image
                 width={900}
                 height={900}
